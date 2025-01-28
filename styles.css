@@ -41,7 +41,6 @@ nav ul li a:hover {
     color: #3498db;
 }
 
-/* Стилі для героя-секції */
 .hero {
     background-color: #2980b9;
     color: #fff;
@@ -73,7 +72,6 @@ nav ul li a:hover {
     color: #fff;
 }
 
-/* Стилі для секції з особливостями */
 .features {
     background-color: #ecf0f1;
     padding: 60px 0;
@@ -168,19 +166,19 @@ footer {
 
 .editor-tools .btn:hover {
     background-color: #3498db;
-    transform: scale(1.05); /* Ефект збільшення при наведенні */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тінь для підвищення інтерактивності */
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .editor-tools .btn:active {
     background-color: #2980b9;
-    transform: scale(0.98); /* Зменшення при натисканні */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Легка тінь при натисканні */
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .editor-btn-container {
-    text-align: center; /* Центрує кнопку по горизонталі */
-    margin-top: 30px; /* Відступ від заголовка */
+    text-align: center;
+    margin-top: 30px;
 }
 
 .editor-btn-container .btn {
@@ -211,7 +209,7 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
     overflow-y: auto;
-    display: block; /* Спочатку список відображається */
+    display: block;
 }
 
 .template-list h2 {
@@ -253,15 +251,15 @@ footer {
     transform: scale(1);
 }
 
-/* Стилі для вікна відображення шаблону */
+
 .template-display {
-    width: 100%; /* Займає всю доступну ширину */
-    height: 100vh; /* Займає всю висоту вікна */
-    padding: 20px; /* Відступи для контенту */
-    box-sizing: border-box; /* Враховує padding в загальній ширині та висоті */
-    background-color: #f0f0f0; /* Світлий фон для вікна */
-    border-left: 3px solid #007bff; /* Лінія зліва */
-    overflow-y: auto; /* Прокручування, якщо контент не вміщається */
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border-left: 3px solid #007bff;
+    overflow-y: auto;
 }
 
 .template-display h2 {
