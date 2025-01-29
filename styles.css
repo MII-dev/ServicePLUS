@@ -136,6 +136,7 @@ nav ul li a:hover {
     width: 100%;
     padding: 11px 10px;
     font-size: 0.75rem;
+    color: white;
     border: 2px white solid;
     border-radius: 5px;
     background: transparent;
@@ -144,6 +145,11 @@ nav ul li a:hover {
 .coolinput input[type=text].input:focus {
     outline: none;
 }
+
+.input::placeholder, textarea::placeholder {
+    color: white;
+    opacity: 1; /* Забезпечує повну непрозорість тексту */
+  }
 
 .features {
     padding: 60px 0;
