@@ -104,11 +104,129 @@ nav ul li a:hover {
     color: #fff;
 }
 
+.card {
+    box-sizing: border-box;
+    width: 81%;
+    height: 20vh;
+    background: transparent;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: white;
+    margin: 5px;
+    font-size: 500%;
+    animation: pulse 3s infinite ease-in-out;
+  }
+
+  .card:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .card:nth-child(2) {
+    animation-delay: 0.9s;
+  }
+  .card:nth-child(3) {
+    animation-delay: 1.8s;
+  }
+  .card:nth-child(4) {
+    animation-delay: 2.7s;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+  .cardList {
+    box-sizing: border-box;
+    width: 81%;
+    height: 20vh;
+    background: transparent;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: white;
+    margin: 5px;
+    font-size: 500%;
+    animation: moveToCenter 3s infinite;
+}
+
+.cardList:nth-child(1){
+    animation-delay: 0s;
+}
+.cardList:nth-child(2){
+    animation-delay: 3s;
+}
+.cardList:nth-child(3){
+    animation-delay: 6s;
+}
+.cardList:nth-child(4){
+    animation-delay: 9s;
+}
+.cardList:nth-child(5){
+    animation-delay: 12s;
+}
+
+@keyframes moveToCenter {
+    0% {
+        opacity: 1;
+        left: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        left: 0;
+        transform: translateX(-40vh) scale(2);
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: translateX(0) scale(1);
+    }
+}
+
 .info-right {
     width: 50%;
 }
 
 .info-left {
+    
     width: 50%;
 }
 
