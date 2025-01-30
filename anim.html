@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Flow Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .chat-container {
+            display: flex;
+            gap: 50px;
+            position: relative;
+            align-items: center;
+        }
+        .chat {
+            width: 150px;
+            height: 250px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-weight: bold;
+            font-size: 18px;
+            animation: typingAnimation 1.5s infinite;
+        }
+        @keyframes typingAnimation {
+            0% { content: "-"; }
+            33% { content: "--"; }
+            66% { content: "---"; }
+            100% { content: "-"; }
+        }
+        .arrow {
+            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: changeColor 2s infinite alternate;
+        }
+        @keyframes changeColor {
+            0% {
+                color: #3498db;
+            }
+            25% {
+                color: transparent;
+            }
+            50% {
+                color: #3498db;
+            }
+            75% {
+                color: transparent;
+            }
+            100% {
+                color: #3498db;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat"></div>
+        <div class="arrow" style="padding-top: 5vh;">→</div>
+        <div class="arrow" style="padding-top: 5vh;">→</div>
+        <div class="chat"></div>
+    </div>
+</body>
+</html>
