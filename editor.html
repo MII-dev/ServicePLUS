@@ -17,40 +17,33 @@
         </nav>
     </header>
 
-    <section class="editor">
-        <div class="container">
-            <h1>Редактор Сайту</h1>
-            <p>Використовуйте цей редактор для створення та редагування вашого сайту. Виберіть шаблон, налаштуйте контент та опублікуйте ваш сайт!</p>
-            
-            <div class="editor-tools">
-                <button class="btn" onclick="selectTemplate()">Оберіть шаблон</button>
-                <button class="btn" onclick="editContent()">Редагувати контент</button>
-                <button class="btn" onclick="publishSite()">Опублікувати</button>
-                <button class="btn" onclick="toggleTemplateList()">Сховати/Показати шаблони</button>
-            </div>
-            
-            <div id="template-list" class="template-list">
-                <h2>Шаблони сайтів</h2>
-                <ul>
-                    <li><button class="template-btn" onclick="loadTemplate('Шаблон 1')">Шаблон 1</button></li>
-                    <li><button class="template-btn" onclick="loadTemplate('Шаблон 2')">Шаблон 2</button></li>
-                    <li><button class="template-btn" onclick="loadTemplate('Шаблон 3')">Шаблон 3</button></li>
-                    <li><button class="template-btn" onclick="loadTemplate('Шаблон 4')">Шаблон 4</button></li>
-                    <li><button class="template-btn" onclick="loadTemplate('Шаблон 5')">Шаблон 5</button></li>
-                </ul>
-            </div>
-
-            <div id="template-display" class="template-display">
-                <h2 id="template-name">Вибраний шаблон: Немає</h2>
-                <p>Тут буде відображено вибраний шаблон для перегляду.</p>
-            </div>
+    <div class="editor-div">
+        <div class="editor-container-input">
+            <h3>Ведіть HTML код:</h3>
+            <textarea class="editor-input" id="htmlInput" placeholder="Введіть HTML код тут..."></textarea>
+            <button class="editor-button" onclick="updatePreview()">Оновити</button>
         </div>
-    </section>
+
+        <div class="editor-container-output">
+            <h3>Попередній перегляд:</h3>
+            <iframe class="editor-output" id="preview"></iframe>
+        </div>
+
+    </div>
 
     <footer>
         <p>&copy; 2025 Інноваційна платформа. Усі права захищені.</p>
     </footer>
 
     <script src="editorJS.js"></script>
+    <script>
+        function updatePreview() {
+            const htmlCode = document.getElementById('htmlInput').value;
+            const previewFrame = document.getElementById('preview').contentDocument;
+            previewFrame.open();
+            previewFrame.write(htmlCode);
+            previewFrame.close();
+        }
+    </script>
 </body>
 </html>
