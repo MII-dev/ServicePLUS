@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,69 @@
     <title>Редактор Сайту</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
+    <!-- <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="editor.html">Редагувати сайт</a></li>
-            </ul>
+            <div class="logo">
+                <img src="src/logo3.png" alt="СЕРВІС+">
+            </div>
         </nav>
-    </header>
+    </header> -->
+
+    
 
     <div class="editor-div">
-        <div class="editor-container-input">
+        <div style="width: 40vh; display: flex; justify-content: flex-start; align-items: center; flex-direction: column;">
+            <nav>
+                <div class="logo">
+                    <img src="src/logo3.png" alt="СЕРВІС+">
+                </div>
+            </nav>
+            <div style="display: flex; width: 100%; padding: 10px;">
+                <button id="files" class="editor-nav-button-small" onclick="setActive(this, 'editor-file-list')">Сторінки</button>
+                <button id="samples" class="editor-nav-button-small" onclick="setActive(this, 'editor-sample-list')">Шаблони</button>
+            </div>
+            <div>
+                <div id="editor-file-list" class="editor-file-list" style="display: none;">1</div>
+
+
+
+                <div id="editor-sample-list" class="editor-sample-list" style="display: none;">
+                    <div class="editor-style-cardList" style="width: 20vh; height: 10vh;" >
+                        I
+                    </div>
+                    <div class="editor-style-cardList" style="width: 20vh; height: 10vh;" >
+                        II
+                    </div>
+                    <div class="editor-style-cardList" style="width: 20vh; height: 10vh;" >
+                        III
+                    </div>
+                    <div class="editor-style-cardList" style="width: 20vh; height: 10vh;" >
+                        IV
+                    </div>
+                    <div class="editor-style-cardList" style="width: 20vh; height: 10vh;" >
+                        V
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        <!-- <div class="editor-container-input" style="display: none;">
             <h3>Ведіть HTML код:</h3>
             <textarea class="editor-input" id="htmlInput" placeholder="Введіть HTML код тут..."></textarea>
             <button class="editor-button" onclick="updatePreview()">Оновити</button>
-        </div>
+        </div> -->
 
         <div class="editor-container-output">
-            <h3>Попередній перегляд:</h3>
             <iframe class="editor-output" id="preview"></iframe>
         </div>
+        
+        <div style="width: 40vh;">
 
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Інноваційна платформа. Усі права захищені.</p>
-    </footer>
-
     <script src="editorJS.js"></script>
     <script>
         function updatePreview() {
@@ -44,6 +80,18 @@
             previewFrame.write(htmlCode);
             previewFrame.close();
         }
+        function setActive(button, tabId) {
+            document.querySelectorAll('.editor-nav-button-small').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            let selectedID = button.id;
+
+            document.getElementById('editor-file-list').style.display = 'none'
+            document.getElementById('editor-sample-list').style.display = 'none'
+
+            document.getElementById(tabId).style.display = 'flex'
+        }
     </script>
 </body>
+
 </html>

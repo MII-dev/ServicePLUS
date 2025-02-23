@@ -290,6 +290,7 @@ nav ul li a:hover {
 .coolinput input[type="text"].input:focus {
     outline: none;
 }
+
 .input::placeholder,
 textarea::placeholder {
     color: white;
@@ -334,13 +335,13 @@ footer {
     width: 100%;
 }
 
-.editor-div{
+.editor-div {
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
-.editor-container-input{
+.editor-container-input {
     display: flex;
     padding: 5px;
     width: 100%;
@@ -348,7 +349,7 @@ footer {
     flex-direction: column;
 }
 
-.editor-input{
+.editor-input {
     width: 100%;
     height: 90vh;
 }
@@ -371,16 +372,48 @@ footer {
     color: #2c3e50;
 }
 
-.editor-container-output{
-    padding: 5px;
+.editor-nav-button-small {
+    background: transparent;
+    width: auto;
+    color: white;
+    border: 1px solid transparent;
+    margin: 5px;
+    padding: 2px 2px 2px 2px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.editor-nav-button-small:hover {
+    background: white;
+    color: #2c3e50;
+}
+.editor-nav-button-small.active {
+    background: white;
+    color: #2c3e50;
+}
+
+.editor-container-output {
     width: 100%;
     height: 100vh;
 }
 
-.editor-output{
+.editor-output {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background: white;
+}
+
+.editor-file-list {
+    display: none;
+}
+
+.editor-sample-list {
+    display: none;
+    flex-direction: column;
 }
 
 .hidden {
@@ -407,4 +440,34 @@ footer {
 .editor-btn-container .btn:hover {
     background: white;
     color: #2c3e50;
+}
+
+.editor-style-cardList {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    margin: 10px 0px 10px 0px;
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: white;
+    font-size: 500%;
+}
+
+.editor-style-cardList:hover {
+    border: 1px solid black;
+    transform: scale(1.1);
+}
+
+.editor-style-cardList:active {
+    transform: scale(0.95);
 }
