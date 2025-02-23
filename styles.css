@@ -6,9 +6,9 @@
 
 body {
     height: 100%;
-    background: linear-gradient(to bottom, #505267, #a9abca);
+    background: linear-gradient(to bottom, #4b4b4b, #4b4b4b);
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #4b4b4b;
     color: #333;
     margin: 0;
 }
@@ -339,6 +339,7 @@ footer {
     display: flex;
     width: 100%;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 .editor-container-input {
@@ -412,8 +413,25 @@ footer {
 }
 
 .editor-sample-list {
+    width: 100%;
     display: none;
     flex-direction: column;
+    max-height: 88vh;
+    overflow-y: auto;
+}
+
+.editor-sample-list::-webkit-scrollbar {
+    width: 8px; /* Ширина скролу */
+}
+
+.editor-sample-list::-webkit-scrollbar-track {
+    background: transparent; /* Фон доріжки */
+    border-radius: 4px;
+}
+
+.editor-sample-list::-webkit-scrollbar-thumb {
+    background: white; /* Колір повзунка */
+    border-radius: 4px;
 }
 
 .hidden {
@@ -442,32 +460,37 @@ footer {
     color: #2c3e50;
 }
 
-.editor-style-cardList {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+.editor-sample-cardList {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     background: transparent;
-    margin: 10px 0px 10px 0px;
+    background-size: cover;
+    margin: 10px 5px 10px 5px;
     backdrop-filter: blur(6px);
     border-radius: 17px;
-    text-align: center;
     cursor: pointer;
     transition: all 0.5s;
-    display: flex;
-    align-items: center;
-    opacity: 1;
-    justify-content: center;
-    user-select: none;
-    font-weight: bolder;
     color: white;
-    font-size: 500%;
 }
 
-.editor-style-cardList:hover {
+.editor-sample-cardList img{
+    width: 100%;
+    height: 50%;
+    object-fit: fill;
+    border-radius: 17px 17px 0 0;
+}
+
+.editor-sample-cardList:hover {
     border: 1px solid black;
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
-.editor-style-cardList:active {
+.editor-sample-cardList:active {
     transform: scale(0.95);
+}
+
+.editor-sample-card-describe {
+    padding: 15px;
 }
